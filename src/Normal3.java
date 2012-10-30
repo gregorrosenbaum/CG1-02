@@ -12,14 +12,14 @@ public class Normal3 {
 	}
 	
 	public Normal3 mul(double n){
-		
+		return new Normal3(x * n,y * n,z* n);
 	}
 	
 	public Normal3 add(Vector3 v){
-		
+		return new Normal3(x + v.x,y+v.y,z+v.z);
 	}
 	
 	public double dot(Vector3 v){
-		
+		return x * v.x + y * v.y + z * v.z;		
 	}
 }

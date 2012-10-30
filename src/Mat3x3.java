@@ -53,7 +53,11 @@ public class Mat3x3 {
 	}
 	
 	public Point3 mul (Point3 p){
-		return null;
+		return new Point3(
+				m11 * p.x + m12 * p.y + m13 * p.z,
+				m21 * p.x + m22 * p.y + m23 * p.z,
+				m31 * p.x + m32 * p.y + m33 * p.z
+				);
 	}
 	
 	public Mat3x3 changeCol1(Vector3 v){

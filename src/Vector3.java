@@ -19,11 +19,11 @@ public class Vector3 {
 	}
 	
 	public Vector3 add (Normal3 n){
-		return null;
+		return new Vector3(x + n.x,y+n.y,z+n.z);
 	}
 	
 	public Vector3 sub (Normal3 n){
-		return null;	
+		return new Vector3(x + n.x,y+n.y,z+n.z);
 	}
 	
 	public Vector3 mul (double c){
@@ -35,23 +35,22 @@ public class Vector3 {
 	}
 	
 	public double dot (Normal3 n){
-		return 0;
-		
+		return x * n.x + y * n.y + z * n.z;				
 	}
 	
 	public Vector3 normalized (){
-		return null;
-		
+		return mul(1 / Math.sqrt(x*x + y*y + z*z));		
 	}
 	
 	public Normal3 asNormal(){
-		return null;
+		Vector3 v = normalized();
+		return new Normal3(v.x, v.y, v.z);
 		
 	}
 	
 	public Vector3 reflectedOn (Normal3 n){
-		return null;
-		
+		// vnew = -2*(V dot n) * n + v
+		return this.add(n.mul((this.dot(n) * -2.0)));
 	}
 	
 	public Vector3 x (Vector3 v){
