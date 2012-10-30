@@ -13,7 +13,7 @@ public class Mat3x3 {
 	final double determinant;
 	
 	public Mat3x3(double m11, double m12, double m13, double m21, double m22,
-			double m23, double m31, double m32, double m33, double determinant) {
+			double m23, double m31, double m32, double m33) {
 		super();
 		this.m11 = m11;
 		this.m12 = m12;
@@ -24,14 +24,32 @@ public class Mat3x3 {
 		this.m31 = m31;
 		this.m32 = m32;
 		this.m33 = m33;
-		this.determinant = (m11 * m22* m33) + (m12 * m23 * m31) + (m13 * m21 * m32) - (m31 * m22 * m13) - (m32 * m23 *m11 ) - (m33 * m21 * m12);
+		this.determinant = 
+				(m11 * m22* m33) + (m12 * m23 * m31) + 
+				(m13 * m21 * m32) - (m31 * m22 * m13) - 
+				(m32 * m23 *m11 ) - (m33 * m21 * m12);
 	}
+	
 	public Mat3x3 mul (Mat3x3 m){
-		
-		
+		return new Mat3x3(
+				m11 * m.m11 + m12 * m.m21 + m13 * m.m31,
+				m11*m.m12+m12*m.m22+m13*m.m32,
+				m11*m.m13+m12*m.m23+m13*m.m33,
+				m21*m.m11+m22*m.m21+m23*m.m31,
+				m21*m.m12+m22*m.m22+m23*m.m32,
+				m21*m.m13+m22*m.m23+m23*m.m33,
+				m31*m.m11+m32*m.m21+m33*m.m31,
+				m31*m.m12+m32*m.m22+m33*m.m32,
+				m31*m.m13+m32*m.m23+m33*m.m33
+				);
 	}
+	
 	public Vector3 mul (Vector3 v){
-		
+		return new Vector3(
+				m11 * v.x + m12 * v.y + m13 * v.z,
+				m21 * v.x + m22 * v.y + m23 * v.z,
+				m31 * v.x + m32 * v.y + m33 * v.z
+				);
 	}
 	
 	public Point3 mul (Point3 p){
