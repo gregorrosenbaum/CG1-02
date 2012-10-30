@@ -24,9 +24,10 @@ public class Mat3x3 {
 		this.m31 = m31;
 		this.m32 = m32;
 		this.m33 = m33;
-		this.determinant = determinant;
+		this.determinant = (m11 * m22* m33) + (m12 * m23 * m31) + (m13 * m21 * m32) - (m31 * m22 * m13) - (m32 * m23 *m11 ) - (m33 * m21 * m12);
 	}
 	public Mat3x3 mul (Mat3x3 m){
+		
 		
 	}
 	public Vector3 mul (Vector3 v){
@@ -48,6 +49,8 @@ public class Mat3x3 {
 	public Mat3x3 changeCol3(Vector3 v){
 		
 	}
+	
+	
 
 
 }
