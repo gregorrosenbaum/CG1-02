@@ -1,9 +1,9 @@
 
 public class Normal3 {
 	
-	double x;
-	double y;
-	double z;
+	final double x;
+	final double y;
+	final double z;
 	
 	public Normal3(double x, double y, double z){
 		this.x = x;

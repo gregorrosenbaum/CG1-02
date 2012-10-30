@@ -1,16 +1,16 @@
 
 public class Mat3x3 {
 	
-	double m11;
-	double m12;
-	double m13;
-	double m21;
-	double m22;
-	double m23;
-	double m31;
-	double m32;
-	double m33;
-	double determinant;
+	final double m11;
+	final double m12;
+	final double m13;
+	final double m21;
+	final double m22;
+	final double m23;
+	final double m31;
+	final double m32;
+	final double m33;
+	final double determinant;
 	
 	public Mat3x3(double m11, double m12, double m13, double m21, double m22,
 			double m23, double m31, double m32, double m33, double determinant) {
