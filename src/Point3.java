@@ -17,10 +17,10 @@ public class Point3 {
 	}
 	
 	public Point3 sub (Vector3 v){
-		return new Point3(x - v.x,y-v.y,z-v.z)
+		return new Point3(x - v.x,y-v.y,z-v.z);
 		
 	}
 	public Point3 add (Vector3 v){
-		return new Point3(x + v.x,y+v.y,z+v.z)
+		return new Point3(x + v.x,y+v.y,z+v.z);
 	}
 }
