@@ -47,8 +47,8 @@ public class Vector3 {
 	}
 
 	public Vector3 reflectedOn(Normal3 n) {
-		// vnew = -2*(V dot n) * n + v
-		return this.add(n.mul((this.dot(n) * -2.0)));
+		// Vr=-(Vi-2*(Vi·N)*N)
+		return this.add(n.mul((this.dot(n) * -2.0))).mul(-1);
 	}
 
 	public Vector3 x(Vector3 v) {
