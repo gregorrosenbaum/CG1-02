@@ -1,6 +1,6 @@
-public class Mat3x3 {
+public class Mat3x3 { 
 
-	final double m11;
+	final double m11; 
 	final double m12;
 	final double m13;
 	final double m21;
@@ -10,6 +10,18 @@ public class Mat3x3 {
 	final double m32;
 	final double m33;
 	final double determinant;
+	/**
+	 * 
+	 * @param m11 Variable for 3x3 Matrix left up
+	 * @param m12 Variable for 3x3 Matrix middle up
+	 * @param m13 Variable for 3x3 Matrix right up
+	 * @param m21 Variable for 3x3 Matrix left middle
+	 * @param m22 Variable for 3x3 Matrix middle middle
+	 * @param m23 Variable for 3x3 Matrix right middle
+	 * @param m31 Variable for 3x3 Matrix left down
+	 * @param m32 Variable for 3x3 Matrix middle down
+	 * @param m33 Variable for 3x3 Matrix right down
+	 */
 
 	public Mat3x3(final double m11, final double m12, final double m13, final double m21, final double m22, final double m23, final double m31,
 			final double m32, final double m33) {
@@ -23,16 +35,25 @@ public class Mat3x3 {
 		this.m32 = m32;
 		this.m33 = m33;
 		this.determinant = (m11 * m22 * m33) + (m12 * m23 * m31) + (m13 * m21 * m32) - (m31 * m22 * m13) - (m32 * m23 * m11) - (m33 * m21 * m12);
+		/**
+		 *  
+		 */
 	}
 
 	public final Mat3x3 mul(Mat3x3 m) {
 		return new Mat3x3(m11 * m.m11 + m12 * m.m21 + m13 * m.m31, m11 * m.m12 + m12 * m.m22 + m13 * m.m32, m11 * m.m13 + m12 * m.m23 + m13 * m.m33,
 				m21 * m.m11 + m22 * m.m21 + m23 * m.m31, m21 * m.m12 + m22 * m.m22 + m23 * m.m32, m21 * m.m13 + m22 * m.m23 + m23 * m.m33, m31
 						* m.m11 + m32 * m.m21 + m33 * m.m31, m31 * m.m12 + m32 * m.m22 + m33 * m.m32, m31 * m.m13 + m32 * m.m23 + m33 * m.m33);
+		/**
+		 * 
+		 */
 	}
 
 	public final Vector3 mul(Vector3 v) {
 		return new Vector3(m11 * v.x + m12 * v.y + m13 * v.z, m21 * v.x + m22 * v.y + m23 * v.z, m31 * v.x + m32 * v.y + m33 * v.z);
+		/**
+		 * 
+		 */
 	}
 
 	public final Point3 mul(Point3 p) {
