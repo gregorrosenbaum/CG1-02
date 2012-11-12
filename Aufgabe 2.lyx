@@ -1,0 +1,130 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Gruppe Jogran
+\end_layout
+
+\begin_layout Author
+Anton Krebs, Johann Hofmann, Gregor Rosenbaum
+\end_layout
+
+\begin_layout Section
+Zweite Übung:
+\end_layout
+
+\begin_layout Subsection
+Aufgabenstellung
+\end_layout
+
+\begin_layout Standard
+Implementieren Sie eine Vektoren und Matrizen Bibliothek mit den folgenden
+ 4 Klassen: 
+\end_layout
+
+\begin_layout Itemize
+Mat3x3
+\end_layout
+
+\begin_layout Itemize
+Vector3
+\end_layout
+
+\begin_layout Itemize
+Point3
+\end_layout
+
+\begin_layout Itemize
+Normal3
+\end_layout
+
+\begin_layout Subsection
+Lösungsstrategie
+\end_layout
+
+\begin_layout Standard
+Wir erstellen die Klassen und informieren uns über Matrizen und Vektoren,
+ um die Methoden richtig implementieren zu können.
+ Dann haben wir alle Methoden für die jeweiligen Klassen Mat3x2, Vector3,
+ Point3 und Normal3 implementiert.
+\end_layout
+
+\begin_layout Subsection
+Besondere Probleme oder Schwierigkeiten bei der Bearbeitung
+\end_layout
+
+\begin_layout Standard
+Einzelne Schwierigkeiten traten beim Übertragen der Formeln in die jeweiligen
+ Klassenauf und auch ein wenig beim Verständnis der mathematischen Formeln.
+\end_layout
+
+\begin_layout Subsection
+Zeitbedarf
+\end_layout
+
+\begin_layout Standard
+Der Großteil wurde in der Übungsstunden bereits fertiggestellt.
+ Einige Feinheiten und kleinere Fehler welche dann erst mit der Testklasse
+ erkennbar wurden, wurden später korrigiert.
+\end_layout
+
+\end_body
+\end_document
