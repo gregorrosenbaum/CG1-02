@@ -17,19 +17,19 @@
 final class Vector3 {
 
 	/**
-	 * x-value of the point
+	 * x-value of the vector.
 	 */
 	final double x;
 	/**
-	 * y-value of the point
+	 * y-value of the vector.
 	 */
 	final double y;
 	/**
-	 * z-value of the point
+	 * z-value of the vector.
 	 */
 	final double z;
 	/**
-	 * the length of the vector
+	 * the length of the vector.
 	 */
 	final double magnitude;
 
@@ -97,10 +97,10 @@ final class Vector3 {
 
 	/**
 	 * 
-	 * Substracts a normal from the vector.
+	 * Multiplies the vector with a double.
 	 * 
-	 * @param n
-	 *            the normal to substract.
+	 * @param c
+	 *            the double to multiply with.
 	 * @return the result as a new vector.
 	 */
 
