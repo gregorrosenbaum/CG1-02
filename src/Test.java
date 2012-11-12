@@ -72,7 +72,7 @@ public class Test {
 		System.out.println("");
 		System.out.println(testvec.add(testnorm));
 		System.out.println("");
-		System.out.println("FEHLER?????!????");
+		System.out.println("FEHLER?????!???? SUBBBBBBB");
 		System.out.println(testvec.sub(testnorm));
 		System.out.println("");
 		System.out.println(testvec.mul(3));
