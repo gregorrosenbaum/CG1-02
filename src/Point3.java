@@ -46,5 +46,8 @@ public class Point3 {
 	@Override
 	public String toString() {
 		return x + "\n" + y + "\n" + z;
+		/**
+		 * 
+		 */
 	}
 }

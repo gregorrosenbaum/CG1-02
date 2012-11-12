@@ -21,6 +21,7 @@ public class Mat3x3 {
 	 * @param m31 Variable for 3x3 Matrix left down
 	 * @param m32 Variable for 3x3 Matrix middle down
 	 * @param m33 Variable for 3x3 Matrix right down
+	 * @param determinat gives the determinant
 	 */
 
 	public Mat3x3(final double m11, final double m12, final double m13, final double m21, final double m22, final double m23, final double m31,
@@ -36,7 +37,7 @@ public class Mat3x3 {
 		this.m33 = m33;
 		this.determinant = (m11 * m22 * m33) + (m12 * m23 * m31) + (m13 * m21 * m32) - (m31 * m22 * m13) - (m32 * m23 * m11) - (m33 * m21 * m12);
 		/**
-		 *  
+		 *  result for determinant
 		 */
 	}
 
@@ -66,21 +67,21 @@ public class Mat3x3 {
 	public final Mat3x3 changeCol1(Vector3 v) {
 		return new Mat3x3(v.x, m12, m13, v.y, m22, m23, v.z, m32, m33);
 		/**
-		 * 
+		 * Change first column of Matrix
 		 */
 	}
 
 	public final Mat3x3 changeCol2(Vector3 v) {
 		return new Mat3x3(m11, v.x, m13, m21, v.y, m23, m31, v.z, m33);
 		/**
-		 * 
+		 * Change second column of Matrix
 		 */
 	}
 
 	public final Mat3x3 changeCol3(Vector3 v) {
 		return new Mat3x3(m11, m12, v.x, m21, m22, v.y, m31, m32, v.y);
 		/**
-		 * 
+		 * Change third column of Matrix
 		 */
 	}
 
@@ -88,7 +89,7 @@ public class Mat3x3 {
 	public String toString() {
 		return m11 + " " + m12 + " " + m13 + "\n" + m21 + " " + m22 + " " + m23 + "\n" + m31 + " " + m32 + " " + m33;
 		/**
-		 * 
+		 * return result of a matrix to correct output
 		 */
 	}
 
