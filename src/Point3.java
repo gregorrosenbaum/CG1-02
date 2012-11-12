@@ -21,7 +21,7 @@ public class Point3 {
 	public final Vector3 sub(Point3 p) {
 		return new Vector3(x - p.x, y - p.y, z - p.z);
 		/**
-		 *  Vecotor3 sub(Point3 p) gives us the result of a subtraction 
+		 *  Vector3 sub(Point3 p) gives us the result of a subtraction 
 		 *  between a vector and a point
 		 */
 	}
