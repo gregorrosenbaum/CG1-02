@@ -4,11 +4,15 @@ final class Vector3 {
 	final double y;
 	final double z;
 	final double magnitude;
+
 	/**
 	 * 
-	 * @param x x-value for a 3 dimensional vector.
-	 * @param y y-value for a 3 dimensional vector.
-	 * @param z z-value for a 3 dimensional vector.
+	 * @param x
+	 *            x-value for a 3 dimensional vector.
+	 * @param y
+	 *            y-value for a 3 dimensional vector.
+	 * @param z
+	 *            z-value for a 3 dimensional vector.
 	 */
 
 	public Vector3(double x, double y, double z) {
@@ -36,8 +40,8 @@ final class Vector3 {
 	}
 
 	public Vector3 sub(Normal3 n) {
-		return new Vector3(x + n.x, y + n.y, z + n.z);
-		//Rechnung korrrekt?
+		return new Vector3(x - n.x, y - n.y, z - n.z);
+		// Rechnung korrrekt?
 		/**
 		 * Subtracts a Normal3 from the Vector3.
 		 */

@@ -19,7 +19,7 @@ public class Test {
 		testnorm = new Normal3(1, 2, 3);
 		testnorm2 = new Normal3(3, 2, 1);
 		System.out.println(testnorm.add(testnorm2));
-		
+
 		// AK3
 		System.out.println("\nAK3:");
 		testnorm = new Normal3(1, 2, 3);
@@ -39,7 +39,7 @@ public class Test {
 		testpoint = new Point3(1, 1, 1);
 		testpoint2 = new Point3(2, 2, 0);
 		System.out.println(testpoint.sub(testpoint2));
-		
+
 		// AK6
 		System.out.println("\nAK6:");
 		testpoint = new Point3(1, 1, 1);
@@ -63,22 +63,21 @@ public class Test {
 		testvec = new Vector3(1, 1, 1);
 		System.out.println(Math.sqrt(3) + " == " + testvec.magnitude);
 		System.out.println(Math.sqrt(3) == testvec.magnitude);
-		
+
 		// AK10
 		System.out.println("\nAK10:");
-		testvec = new Vector3 (1, 1, 1);
+		testvec = new Vector3(1, 1, 1);
 		testnorm = new Normal3(1, 1, 1);
 		System.out.println(testvec.add(testvec));
 		System.out.println("");
 		System.out.println(testvec.add(testnorm));
 		System.out.println("");
-		System.out.println("FEHLER?????!???? SUBBBBBBB");
 		System.out.println(testvec.sub(testnorm));
 		System.out.println("");
 		System.out.println(testvec.mul(3));
 
 		// AK11
-		System.out.println("\nAK11: ACHTUNG FEHLER!!!!!!BEHOBEN??");
+		System.out.println("\nAK11:");
 		testnorm = new Normal3(0, 1, 0);
 		testvec = new Vector3(-1, 1, 0);
 		System.out.println(testvec.reflectedOn(testnorm));
@@ -101,7 +100,7 @@ public class Test {
 		testmat = new Mat3x3(0, 0, 1, 0, 1, 0, 1, 0, 0);
 		testmat2 = new Mat3x3(1, 2, 3, 4, 5, 6, 7, 8, 9);
 		System.out.println(testmat2.mul(testmat));
-		
+
 		// AK15
 		System.out.println("\nAK15:");
 		testmat = new Mat3x3(1, 2, 3, 4, 5, 6, 7, 8, 9);
@@ -111,7 +110,6 @@ public class Test {
 		System.out.println(testmat.changeCol2(testvec));
 		System.out.println("");
 		System.out.println(testmat.changeCol3(testvec));
-	
 
 	}
 }
