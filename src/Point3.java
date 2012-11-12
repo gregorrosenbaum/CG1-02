@@ -1,6 +1,7 @@
 /**
  * 
- * A simple Point in a 3-dimensional space. <br>
+ * A simple Point in a 3-dimensional space. This class is immutable, it can not be changed once
+ * created.<br>
  * <br>
  * Layout is:<br>
  * <br>
@@ -59,7 +60,7 @@ final class Point3 {
 	 *            the point to substract.
 	 * @return the result as a new Vector.
 	 */
-	public final Vector3 sub(Point3 p) {
+	public Vector3 sub(final Point3 p) {
 		return new Vector3(x - p.x, y - p.y, z - p.z);
 	}
 
@@ -72,7 +73,7 @@ final class Point3 {
 	 * @return the result as a new Vector.
 	 */
 
-	public final Point3 sub(Vector3 v) {
+	public Point3 sub(final Vector3 v) {
 		return new Point3(x - v.x, y - v.y, z - v.z);
 	}
 
@@ -85,7 +86,7 @@ final class Point3 {
 	 * @return the result as a new Point.
 	 */
 
-	public final Point3 add(Vector3 v) {
+	public Point3 add(final Vector3 v) {
 		return new Point3(x + v.x, y + v.y, z + v.z);
 	}
 

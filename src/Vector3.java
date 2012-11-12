@@ -25,21 +25,21 @@ final class Vector3 {
 		 */
 	}
 
-	public Vector3 add(Vector3 v) {
+	public Vector3 add(final Vector3 v) {
 		return new Vector3(x + v.x, y + v.y, z + v.z);
 		/**
 		 * Adds another Vector3 to the existing Vector3.
 		 */
 	}
 
-	public Vector3 add(Normal3 n) {
+	public Vector3 add(final Normal3 n) {
 		return new Vector3(x + n.x, y + n.y, z + n.z);
 		/**
 		 * Adds a Normal3 to the Vector3.
 		 */
 	}
 
-	public Vector3 sub(Normal3 n) {
+	public Vector3 sub(final Normal3 n) {
 		return new Vector3(x - n.x, y - n.y, z - n.z);
 		// Rechnung korrrekt?
 		/**
@@ -47,14 +47,14 @@ final class Vector3 {
 		 */
 	}
 
-	public Vector3 mul(double c) {
+	public Vector3 mul(final double c) {
 		return new Vector3(x * c, y * c, z * c);
 		/**
 		 * Multiplies the Vector3 with a floating-point number.
 		 */
 	}
 
-	public double dot(Vector3 v) {
+	public double dot(final Vector3 v) {
 		return x * v.x + y * v.y + z * v.z;
 		// Aussage korrekt?
 		/**
@@ -62,7 +62,7 @@ final class Vector3 {
 		 */
 	}
 
-	public double dot(Normal3 n) {
+	public double dot(final Normal3 n) {
 		return x * n.x + y * n.y + z * n.z;
 		/**
 		 * Multiplies the Vector3 with a Normal3.
@@ -85,7 +85,7 @@ final class Vector3 {
 
 	}
 
-	public Vector3 reflectedOn(Normal3 n) {
+	public Vector3 reflectedOn(final Normal3 n) {
 		// Vr=-(Vi-2*(Vi·N)*N)
 		return this.add(n.mul((this.dot(n) * -2.0))).mul(-1);
 		/**
@@ -93,7 +93,7 @@ final class Vector3 {
 		 */
 	}
 
-	public Vector3 x(Vector3 v) {
+	public Vector3 x(final Vector3 v) {
 		return new Vector3(y * v.y - z * v.y, z * v.x - x * v.z, x * v.y - y * v.x);
 		/**
 		 * Multiplies the Vector3 with another Vector3
