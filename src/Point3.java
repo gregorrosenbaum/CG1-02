@@ -1,4 +1,4 @@
-public class Point3 {
+final class Point3 {
 
 	final double x;
 	final double y;
@@ -22,7 +22,7 @@ public class Point3 {
 		return new Vector3(x - p.x, y - p.y, z - p.z);
 		/**
 		 *  Vector3 sub(Point3 p) gives us the result of a subtraction 
-		 *  between a vector and a point
+		 *  between a vector and the point
 		 */
 	}
 
@@ -30,7 +30,7 @@ public class Point3 {
 		return new Point3(x - v.x, y - v.y, z - v.z);
 		/**
 		 *  Point3 sub(Vector3 v) gives us the result of a subtraction
-		 *  between a point and a vector
+		 *  between the point and a vector
 		 */
 
 	}
@@ -38,8 +38,8 @@ public class Point3 {
 	public final Point3 add(Vector3 v) {
 		return new Point3(x + v.x, y + v.y, z + v.z);
 		/**
-		 * Point3 add(Vector3 v) gives us the result of a addition
-		 * between a point and a vector
+		 * Point3 add(Vector3 v) gives us the result of an addition
+		 * between the point and a vector
 		 */
 	}
 
