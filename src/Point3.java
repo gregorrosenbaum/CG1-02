@@ -1,53 +1,96 @@
+/**
+ * 
+ * A simple Point in a 3-dimensional space. <br>
+ * <br>
+ * Layout is:<br>
+ * <br>
+ * x<br>
+ * y<br>
+ * z<br>
+ * 
+ * @author Johann Hofmann
+ * @author Anton Krebs
+ * @author Gregor Rosenbaum
+ * 
+ */
+
 final class Point3 {
 
+	/**
+	 * x-value of the point
+	 */
 	final double x;
+	/**
+	 * y-value of the point
+	 */
 	final double y;
+	/**
+	 * z-value of the point
+	 */
 	final double z;
+
 	/**
 	 * 
-	 * @param x x-value for a 3 dimensional system
-	 * @param y y-value for a 3 dimensional system
-	 * @param z z-value for a 3 dimensional system
+	 * Creates a new Point with the following layout:
+	 * 
+	 * <br>
+	 * x<br>
+	 * y<br>
+	 * z<br>
+	 * 
+	 * @param x
+	 *            x-value of the point
+	 * @param y
+	 *            y-value of the point
+	 * @param z
+	 *            z-value of the point
 	 */
 	public Point3(final double x, final double y, final double z) {
 		this.x = x;
 		this.y = y;
 		this.z = z;
-		/**
-		 * Point 3 gives us a point with our values x,y,z
-		 */
 	}
 
+	/**
+	 * 
+	 * Gives us the result of a substraction of another point from the point.
+	 * 
+	 * @param p
+	 *            the point to substract.
+	 * @return the result as a new Vector.
+	 */
 	public final Vector3 sub(Point3 p) {
 		return new Vector3(x - p.x, y - p.y, z - p.z);
-		/**
-		 *  Vector3 sub(Point3 p) gives us the result of a subtraction 
-		 *  between a vector and the point
-		 */
 	}
+
+	/**
+	 * 
+	 * Gives us the result of a substraction of a vector from the point.
+	 * 
+	 * @param v
+	 *            the vector to substract.
+	 * @return the result as a new Vector.
+	 */
 
 	public final Point3 sub(Vector3 v) {
 		return new Point3(x - v.x, y - v.y, z - v.z);
-		/**
-		 *  Point3 sub(Vector3 v) gives us the result of a subtraction
-		 *  between the point and a vector
-		 */
-
 	}
+
+	/**
+	 * 
+	 * Gives us the result of the addition of a Vector to the Point.
+	 * 
+	 * @param v
+	 *            the vector to add.
+	 * @return the result as a new Point.
+	 */
 
 	public final Point3 add(Vector3 v) {
 		return new Point3(x + v.x, y + v.y, z + v.z);
-		/**
-		 * Point3 add(Vector3 v) gives us the result of an addition
-		 * between the point and a vector
-		 */
 	}
 
 	@Override
 	public String toString() {
 		return x + "\n" + y + "\n" + z;
-		/**
-		 * return result of a point to correct output
-		 */
 	}
 }
