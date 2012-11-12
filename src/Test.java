@@ -76,6 +76,7 @@ public class Test {
 		testmat = new Mat3x3(0, 0, 1, 0, 1, 0, 1, 0, 0);
 		testmat2 = new Mat3x3(1, 2, 3, 4, 5, 6, 7, 8, 9);
 		System.out.println(testmat2.mul(testmat));
+		
 
 	}
 }

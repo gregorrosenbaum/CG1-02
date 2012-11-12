@@ -47,7 +47,7 @@ public class Point3 {
 	public String toString() {
 		return x + "\n" + y + "\n" + z;
 		/**
-		 * 
+		 * return result of a point to correct output
 		 */
 	}
 }
