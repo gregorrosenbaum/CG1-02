@@ -1,4 +1,5 @@
 package vectorlib;
+
 /**
  * 
  * A Class representing a 3x3 Matrix. This class is immutable, it can not be changed once created.
@@ -99,7 +100,7 @@ public final class Mat3x3 {
 		this.m31 = m31;
 		this.m32 = m32;
 		this.m33 = m33;
-		this.determinant = (m11 * m22 * m33) + (m12 * m23 * m31) + (m13 * m21 * m32) - (m31 * m22 * m13) - (m32 * m23 * m11) - (m33 * m21 * m12);
+		this.determinant = (m11 * m22 * m33) + (m12 * m23 * m31) + (m13 * m21 * m32) - (m13 * m22 * m31) - (m12 * m21 * m33) - (m11 * m23 * m32);
 	}
 
 	/**
@@ -175,7 +176,7 @@ public final class Mat3x3 {
 	 * @return the changed Matrix.
 	 */
 	public Mat3x3 changeCol3(final Vector3 v) {
-		return new Mat3x3(m11, m12, v.x, m21, m22, v.y, m31, m32, v.y);
+		return new Mat3x3(m11, m12, v.x, m21, m22, v.y, m31, m32, v.z);
 	}
 
 	@Override
@@ -220,8 +221,7 @@ public final class Mat3x3 {
 		if (getClass() != obj.getClass())
 			return false;
 		Mat3x3 other = (Mat3x3) obj;
-		if (Double.doubleToLongBits(determinant) != Double
-				.doubleToLongBits(other.determinant))
+		if (Double.doubleToLongBits(determinant) != Double.doubleToLongBits(other.determinant))
 			return false;
 		if (Double.doubleToLongBits(m11) != Double.doubleToLongBits(other.m11))
 			return false;

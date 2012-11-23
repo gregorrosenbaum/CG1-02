@@ -1,4 +1,5 @@
 package vectorlib;
+
 /**
  * 
  * A Vector in a 3-dimensional space. This class is immutable, it can not be changed once created.<br>
@@ -181,7 +182,7 @@ public final class Vector3 {
 	 */
 
 	public Vector3 x(final Vector3 v) {
-		return new Vector3(y * v.y - z * v.y, z * v.x - x * v.z, x * v.y - y * v.x);
+		return new Vector3((y * v.z) - (z * v.y), (z * v.x) - (x * v.z), (x * v.y) - (y * v.x));
 	}
 
 	@Override
@@ -214,8 +215,7 @@ public final class Vector3 {
 		if (getClass() != obj.getClass())
 			return false;
 		Vector3 other = (Vector3) obj;
-		if (Double.doubleToLongBits(magnitude) != Double
-				.doubleToLongBits(other.magnitude))
+		if (Double.doubleToLongBits(magnitude) != Double.doubleToLongBits(other.magnitude))
 			return false;
 		if (Double.doubleToLongBits(x) != Double.doubleToLongBits(other.x))
 			return false;
